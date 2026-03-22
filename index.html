@@ -3,285 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pendaftaran Santri Baru 2026-2027 - YPI Darus Salam Ngemplak</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    <title>PSB YPI Darus Salam Ngemplak 2026-2027</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* --- RESET & BASIC STYLES --- */
-        :root {
-            --primary-color: #00796B; /* Teal tua, seperti di brosur */
-            --accent-color: #FFD600;  /* Kuning aksen, seperti di brosur */
-            --text-dark: #333;
-            --text-light: #fff;
-            --bg-light: #f4f7f6;
-            --shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        /* --- STYLING HEADER & NAVIGASI --- */
-        header {
-            background-color: var(--primary-color);
-            color: var(--text-light);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-light);
-            font-weight: 400;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-color);
-        }
-
-        /* --- STYLING MAIN CONTENT --- */
-        main {
-            margin-top: 80px; /* Jarak untuk header fixed */
-            padding-bottom: 4rem;
-        }
-
-        /* Container untuk membungkus gambar brosur */
-        .brochure-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem;
-            background: #fff;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
-
-        /* Styling Judul Section */
-        .section-title {
-            text-align: center;
-            font-family: 'Playfair Display', serif;
-            color: var(--primary-color);
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            margin-top: 3rem;
-            position: relative;
-            padding-bottom: 1rem;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--accent-color);
-        }
-
-        /* --- STYLING GAMBAR BROSUR --- */
-        .brochure-page {
-            width: 100%;
-            margin-bottom: 2rem; /* Jarak antar halaman brosur */
-            box-shadow: var(--shadow);
-            border-radius: 4px;
-            transition: transform 0.3s;
-        }
-
-        .brochure-page:hover {
-            transform: translateY(-5px); /* Efek melayang saat hover */
-        }
-
-        /* --- STYLING CALL TO ACTION (CTA) --- */
-        .cta-section {
-            background-color: var(--primary-color);
-            color: var(--text-light);
-            text-align: center;
-            padding: 4rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: #333;
-            text-decoration: none;
-            padding: 1rem 2rem;
-            font-weight: 600;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            margin-top: 1.5rem;
-            transition: background-color 0.3s, transform 0.2s;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-
-        .cta-button:hover {
-            background-color: #fdd835; /* Kuning lebih terang */
-            transform: scale(1.05);
-        }
-
-        /* --- STYLING FOOTER --- */
-        footer {
-            background-color: #333;
-            color: #bbb;
-            text-align: center;
-            padding: 3rem 2rem;
-        }
-
-        .footer-socials {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-socials a {
-            color: #bbb;
-            transition: color 0.3s;
-        }
-
-        .footer-socials a:hover {
-            color: var(--accent-color);
-        }
-
-        /* --- RESPONSIVE STYLES (UNTUK HP) --- */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                padding: 1rem;
-            }
-
-            .nav-links {
-                margin-top: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1rem;
-            }
-
-            .logo {
-                font-size: 1.2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .brochure-container {
-                padding: 1rem;
-            }
-        }
+        :root { --primary: #00796B; --accent: #FFD600; }
+        body { font-family: 'Poppins', sans-serif; background: #f0f4f3; margin: 0; padding: 0; text-align: center; }
+        header { background: var(--primary); color: white; padding: 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        .container { max-width: 800px; margin: 20px auto; padding: 10px; }
+        .card { background: white; margin-bottom: 30px; padding: 15px; border-radius: 12px; box-shadow: 0 8px 15px rgba(0,0,0,0.1); border-bottom: 5px solid var(--accent); }
+        img { width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto; }
+        h2 { color: var(--primary); margin-bottom: 15px; font-size: 1.4rem; padding-bottom: 5px; }
+        .btn { display: inline-block; background: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; margin: 20px 0; transition: 0.3s; }
+        footer { background: #333; color: white; padding: 20px; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">Darus Salam Ngemplak</div>
-            <ul class="nav-links">
-                <li><a href="#beranda">Beranda</a></li>
-                <li><a href="#keunggulan">Keunggulan</a></li>
-                <li><a href="#syarat">Syarat & Jadwal</a></li>
-                <li><a href="#kegiatan">Kegiatan</a></li>
-                <li><a href="#kontak">Daftar</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <div style="font-weight:bold; font-size: 1.2rem;">YPI DARUS SALAM NGEMPLAK</div>
+</header>
 
-    <main>
-        
-        <section id="beranda" class="brochure-container">
-            <h1 class="section-title">Penerimaan Santri Baru</h1>
-            <img src="halaman1.png" alt="Sampul Brosur PSB Darus Salam 2026-2027" class="brochure-page">
-        </section>
+<div class="container">
+    <div class="card">
+        <h2>Penerimaan Santri Baru</h2>
+        <img src="1.jpg.jpg" alt="Brosur 1">
+    </div>
 
-        <section id="keunggulan" class="brochure-container">
-            <h2 class="section-title">Mengapa Harus Mondok?</h2>
-            <img src="halaman2.png" alt="Keunggulan Darus Salam Ngemplak" class="brochure-page">
-        </section>
+    <div class="card">
+        <h2>Kenapa Harus Mondok?</h2>
+        <img src="2.jpg.jpg" alt="Brosur 2">
+    </div>
 
-        <section id="syarat" class="brochure-container">
-            <h2 class="section-title">Jadwal & Syarat Pendaftaran</h2>
-            <img src="halaman3.png" alt="Jadwal dan Syarat Pendaftaran" class="brochure-page">
-        </section>
-        
-        <section id="kegiatan" class="brochure-container">
-            <h2 class="section-title">Kegiatan Harian Santri</h2>
-            <img src="halaman4.png" alt="Jadwal Kegiatan Santri" class="brochure-page">
-        </section>
-        
-        <section class="brochure-container">
-            <h2 class="section-title">Ekstrakurikuler Unggulan</h2>
-            <img src="halaman5.png" alt="Daftar Ekstrakurikuler" class="brochure-page">
-        </section>
-        
-        <section class="brochure-container">
-            <h2 class="section-title">Rincian Biaya Studi</h2>
-            <img src="halaman6.png" alt="Rincian Biaya Santri Baru" class="brochure-page">
-        </section>
-        
-        <section id="kontak" class="brochure-container">
-            <h2 class="section-title">Tempat & Alur Pendaftaran</h2>
-            <img src="halaman7.png" alt="Lokasi dan Kontak Person" class="brochure-page">
-        </section>
+    <div class="card">
+        <h2>Jadwal & Syarat</h2>
+        <img src="3.jpg.jpg" alt="Brosur 3">
+    </div>
 
-        <section class="cta-section">
-            <h2>Siap Menjadi Generasi Qur'ani?</h2>
-            <p>Klik tombol di bawah untuk mendaftar secara online sekarang.</p>
-            <a href="https://linktr.ee/psb.ta_26" class="cta-button" target="_blank">
-                Daftar Online Sekarang <i class="fas fa-external-link-alt"></i>
-            </a>
-        </section>
+    <div class="card">
+        <h2>Kegiatan Santri</h2>
+        <img src="4.jpg.jpg" alt="Brosur 4">
+    </div>
 
-    </main>
+    <div class="card">
+        <h2>Ekstrakurikuler</h2>
+        <img src="5.jpg.jpg" alt="Brosur 5">
+    </div>
 
-    <footer>
-        <div class="footer-socials">
-            <a href="https://facebook.com/ypidarussalamngemplak" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://instagram.com/ypidarussalamngemplak" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://youtube.com/@SantriNgemplakOfficial" target="_blank"><i class="fab fa-youtube"></i></a>
-        </div>
-        <p>&copy; 2026-2027 YPI Darus Salam Ngemplak.</p>
-        <p>Jl. Buyut Kasiyah Dk. Ngemplak 02/05 Ds. Jleper Kec. Mijen Kab. Demak Prov. Jateng</p>
-    </footer>
+    <div class="card">
+        <h2>Rincian Biaya</h2>
+        <img src="6.jpg.jpg" alt="Brosur 6">
+    </div>
+
+    <div class="card">
+        <h2>Informasi Kontak</h2>
+        <img src="7.jpg.jpg" alt="Brosur 7">
+        <a href="https://wa.me/6285747744486" class="btn">HUBUNGI PANITIA (WA)</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 YPI Darus Salam Ngemplak</p>
+</footer>
 
 </body>
 </html>
